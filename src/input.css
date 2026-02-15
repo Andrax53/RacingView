@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .glass {
+        background: rgba(128, 128, 128, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .slant {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    .small-slant {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+}

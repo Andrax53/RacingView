@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RacingView - 404</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FFA500',
+                        'orange-hover': '#FF8C00',
+                        'secondary-gray': '#808080',
+                        'dark-gray': '#333333',
+                        'light-gray': '#D3D3D3',
+                    },
+                    backdropFilter: {
+                        'blur': 'blur(10px)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(128, 128, 128, 0.3); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .slant { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        .small-slant { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); }
+        html { scroll-behavior: smooth; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-gray text-light-gray" style="background-image: url('assets/background.jpg'); background-size: cover; background-attachment: fixed; background-position: center; font-family: 'Courier New', Courier, monospace;">
+<div class="text-center glass p-8 rounded-lg slant">
+    <h1 class="text-9xl font-semibold text-primary-orange">404</h1>
+    <h2 class="text-3xl font-semibold mb-4">Страница не найдена</h2>
+    <p class="mb-6">Вернитесь на трассу.</p>
+    <a href="index.html" class="bg-primary-orange text-dark-gray px-6 py-3 rounded hover:bg-orange-hover">На главную</a>
+</div>
+</body>
+</html>

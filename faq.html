@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RacingView - FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FFA500',
+                        'orange-hover': '#FF8C00',
+                        'secondary-gray': '#808080',
+                        'dark-gray': '#333333',
+                        'light-gray': '#D3D3D3',
+                    },
+                    backdropFilter: {
+                        'blur': 'blur(10px)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(128, 128, 128, 0.3); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .slant { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        .small-slant { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); }
+        html { scroll-behavior: smooth; }
+        .section { opacity: 0; transition: opacity 1s ease-in; }
+        .section.visible { opacity: 1; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-gray text-light-gray font-sans" style="background-image: url('assets/background.jpg'); background-size: cover; background-attachment: fixed; background-position: center;">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full glass shadow-md z-10 transition-all duration-300">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-3xl font-semibold text-primary-orange whitespace-nowrap">RacingView</a>
+        <button id="menu-toggle" class="md:hidden text-primary-orange">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav-menu" class="hidden md:flex space-x-6 text-lg">
+            <a href="index.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Главная</a>
+            <a href="news.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Новости</a>
+            <a href="results.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Результаты</a>
+            <a href="calendar.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Календарь</a>
+            <a href="gallery.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Галерея</a>
+            <a href="community.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Сообщество</a>
+            <a href="about.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">О нас</a>
+            <a href="contacts.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Контакты</a>
+            <a href="faq.html" class="text-primary-orange transition-colors whitespace-nowrap">FAQ</a>
+        </nav>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 px-4 py-2 glass">
+        <a href="index.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Главная</a>
+        <a href="news.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Новости</a>
+        <a href="results.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Результаты</a>
+        <a href="calendar.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Календарь</a>
+        <a href="gallery.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Галерея</a>
+        <a href="community.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Сообщество</a>
+        <a href="about.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">О нас</a>
+        <a href="contacts.html" class="hover:text-orange-hover transition-colors whitespace-nowrap">Контакты</a>
+        <a href="faq.html" class="text-primary-orange transition-colors whitespace-nowrap">FAQ</a>
+    </nav>
+</header>
+
+<!-- FAQ -->
+<section class="section min-h-screen pt-16 slant">
+    <div class="container mx-auto px-4 glass p-8 rounded-lg">
+        <h2 class="text-4xl font-semibold mb-8 text-center">FAQ</h2>
+        <details class="mb-4 glass p-4 rounded transition-all duration-300">
+            <summary class="text-2xl font-semibold cursor-pointer">Как начать?</summary>
+            <p>Зарегистрируйтесь и следите за новостями. Регистрация бесплатна и занимает минуту.</p>
+        </details>
+        <details class="mb-4 glass p-4 rounded transition-all duration-300">
+            <summary class="text-2xl font-semibold cursor-pointer">Мобильное app?</summary>
+            <p>В разработке. Пока используйте мобильную версию сайта.</p>
+        </details>
+        <details class="mb-4 glass p-4 rounded transition-all duration-300">
+            <summary class="text-2xl font-semibold cursor-pointer">Как внести вклад?</summary>
+            <p>Свяжитесь через контакты или форум сообщества.</p>
+        </details>
+        <details class="mb-4 glass p-4 rounded transition-all duration-300">
+            <summary class="text-2xl font-semibold cursor-pointer">Как получить уведомления?</summary>
+            <p>Подпишитесь на рассылку в профиле.</p>
+        </details>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="glass py-8 slant">
+    <div class="container mx-auto px-4 text-center">
+        <p class="mb-4 text-lg">info@racingview.com</p>
+        <div class="space-x-6 text-2xl">
+            <a href="#" class="hover:text-orange-hover transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-orange-hover transition-colors"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-orange-hover transition-colors"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="mt-4">&copy; 2026 RacingView</p>
+    </div>
+</footer>
+
+<script>
+    // JS для адаптивного menu
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fade-in для секций
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section').forEach(sec => observer.observe(sec));
+</script>
+
+</body>
+</html>
